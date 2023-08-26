@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB5C7E7A2A999801008D9418 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C7E792A999801008D9418 /* AppDelegate.m */; };
-		FB5C7E7D2A999801008D9418 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C7E7C2A999801008D9418 /* ViewController.m */; };
 		FB5C7E7F2A999802008D9418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5C7E7E2A999802008D9418 /* Assets.xcassets */; };
-		FB5C7E822A999802008D9418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5C7E802A999802008D9418 /* Main.storyboard */; };
 		FB5C7E842A999802008D9418 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C7E832A999802008D9418 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -18,10 +16,7 @@
 		FB5C7E752A999801008D9418 /* SleepNowHotKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepNowHotKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5C7E782A999801008D9418 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FB5C7E792A999801008D9418 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB5C7E7B2A999801008D9418 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB5C7E7C2A999801008D9418 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB5C7E7E2A999802008D9418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB5C7E812A999802008D9418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB5C7E832A999802008D9418 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB5C7E852A999802008D9418 /* SleepNowHotKey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SleepNowHotKey.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,10 +53,7 @@
 			children = (
 				FB5C7E782A999801008D9418 /* AppDelegate.h */,
 				FB5C7E792A999801008D9418 /* AppDelegate.m */,
-				FB5C7E7B2A999801008D9418 /* ViewController.h */,
-				FB5C7E7C2A999801008D9418 /* ViewController.m */,
 				FB5C7E7E2A999802008D9418 /* Assets.xcassets */,
-				FB5C7E802A999802008D9418 /* Main.storyboard */,
 				FB5C7E832A999802008D9418 /* main.m */,
 				FB5C7E852A999802008D9418 /* SleepNowHotKey.entitlements */,
 			);
@@ -126,7 +118,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB5C7E7F2A999802008D9418 /* Assets.xcassets in Resources */,
-				FB5C7E822A999802008D9418 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,24 +128,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB5C7E7D2A999801008D9418 /* ViewController.m in Sources */,
 				FB5C7E842A999802008D9418 /* main.m in Sources */,
 				FB5C7E7A2A999801008D9418 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FB5C7E802A999802008D9418 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB5C7E812A999802008D9418 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FB5C7E862A999802008D9418 /* Debug */ = {
@@ -274,13 +253,13 @@
 				CODE_SIGN_ENTITLEMENTS = SleepNowHotKey/SleepNowHotKey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = FF973S8UP2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,13 +281,13 @@
 				CODE_SIGN_ENTITLEMENTS = SleepNowHotKey/SleepNowHotKey.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = FF973S8UP2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
