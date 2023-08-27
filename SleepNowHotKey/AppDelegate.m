@@ -34,6 +34,7 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
     CGRequestPostEventAccess();
     [self configureHotKeys];
     [self configureLaunchAtLogin];
+    [self configureAutoSleepTimer];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag
@@ -66,6 +67,21 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
 - (void)configureLaunchAtLogin
 {
     [SMAppService.mainAppService registerAndReturnError: nil];
+
+- (void)configureAutoSleepTimer
+{
+    NSNotificationCenter *notificationCenter = NSWorkspace.sharedWorkspace.notificationCenter;
+    __block NSTimer *timer;
+    
+    [notificationCenter addObserverForName:NSWorkspaceScreensDidWakeNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull notification) {
+        [timer invalidate];
+    }];
+    [notificationCenter addObserverForName:NSWorkspaceScreensDidSleepNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull notification) {
+        [timer invalidate];
+        timer = [NSTimer scheduledTimerWithTimeInterval:60 * 60 repeats:NO block:^(NSTimer * _Nonnull timer) {
+            sleepNow();
+        }];
+    }];
 }
 
 - (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app {
