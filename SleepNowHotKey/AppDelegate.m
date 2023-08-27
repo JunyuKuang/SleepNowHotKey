@@ -66,7 +66,10 @@ static OSStatus HotKeyEventCallback(EventHandlerCallRef _, EventRef event, void 
 
 - (void)configureLaunchAtLogin
 {
-    [SMAppService.mainAppService registerAndReturnError: nil];
+    if (@available(macOS 13.0, *)) {
+        [SMAppService.mainAppService registerAndReturnError: nil];
+    }
+}
 
 - (void)configureAutoSleepTimer
 {
